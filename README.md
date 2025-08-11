@@ -80,7 +80,6 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 - [YOLOv8 Docs](https://docs.ultralytics.com)
 - [Torch-Pruning](https://github.com/VainF/Torch-Pruning)
 - [OpenCV](https://opencv.org)
-- PlugIR 논문
 
 ---
 
