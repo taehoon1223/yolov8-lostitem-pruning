@@ -41,7 +41,7 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 ┗ 📜 README.md # 문서  
 
 ## 🖼 데모 영상
-![실시간 탐지 데모](assets/yolo_demo.gif)
+![실시간 탐지 데모](yolo_demo.gif)
 
 
 
