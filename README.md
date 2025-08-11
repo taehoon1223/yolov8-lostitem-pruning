@@ -40,6 +40,7 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 ┣ 📜 requirements.txt # 의존성 목록  
 ┗ 📜 README.md # 문서  
 
+---
 
 ## 📊 성능 비교
 
@@ -67,10 +68,24 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 - 그 이상의 Speed-up은 FPS 향상폭이 크지 않은 반면, mAP 손실이 급격히 증가.
 - **따라서, 본 시스템에는 Target Speed-up 2x를 적용하기로 최종 결정함.**
 
-
+---
 
 ## 🖼 데모 영상
 ![실시간 탐지 데모](yolo_demo.gif)
 
+
+---
+
+## 📚 참고 자료
+- [YOLOv8 Docs](https://docs.ultralytics.com)
+- [Torch-Pruning](https://github.com/VainF/Torch-Pruning)
+- [OpenCV](https://opencv.org)
+- PlugIR 논문
+
+---
+
+## 📬 연락처
+- 개발자: **태훈** (yth91111@naver.com)  
+- GitHub: [taehoon1223](https://github.com/taehoon1223)
 
 
