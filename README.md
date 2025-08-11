@@ -27,17 +27,17 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 ---
 
 ## 📂 프로젝트 구조
-📦 yolov8-lostitem-pruning
-┣ 📂 configs # Pruning 설정 파일(예: pruning_config.yaml)
-┣ 📂 dataset # 데이터셋 및 data.yaml
-┣ 📂 results # 성능 결과/그래프/로그
-┣ 📂 weights # 학습/경량화된 가중치(.pt)
-┣ 📜 yolov8_basic.py # 기본 학습 스크립트
-┣ 📜 yolov8_pruning.py # 모델 경량화 + mAP/MACs/FPS 평가
-┣ 📜 image_test.py # 이미지 단일/배치 추론
-┣ 📜 fps_test.py # FPS 측정 스크립트
-┣ 📜 newwarning.py # 실시간 탐지 + 경고음 알림
-┣ 📜 requirements.txt # 의존성 목록
-┗ 📜 README.md # 문서
+📦 yolov8-lostitem-pruning  
+┣ 📂 configs # Pruning 설정 파일(예: pruning_config.yaml)  
+┣ 📂 dataset # 데이터셋 및 data.yaml  
+┣ 📂 results # 성능 결과/그래프/로그  
+┣ 📂 weights # 학습/경량화된 가중치(.pt)  
+┣ 📜 yolov8_basic.py # 기본 학습 스크립트  
+┣ 📜 yolov8_pruning.py # 모델 경량화 + mAP/MACs/FPS 평가  
+┣ 📜 image_test.py # 이미지 단일/배치 추론  
+┣ 📜 fps_test.py # FPS 측정 스크립트  
+┣ 📜 newwarning.py # 실시간 탐지 + 경고음 알림  
+┣ 📜 requirements.txt # 의존성 목록  
+┗ 📜 README.md # 문서  
 
 
