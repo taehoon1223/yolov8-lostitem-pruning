@@ -59,11 +59,11 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 
 
 ### 📈 FPS vs mAP 변화
-![성능 그래프](assets/yolov8_lostitem_pruning_graph.png)
+![성능 그래프](yolov8_lostitem_pruning_graph.png)
 
 
 ## 🖼 데모 영상
-![실시간 탐지 데모](assets/yolo_demo.gif)
+![실시간 탐지 데모](yolo_demo.gif)
 
 
 
