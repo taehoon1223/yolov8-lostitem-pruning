@@ -1,83 +1,43 @@
-# YOLOv8 기반 실시간 객체 탐지 및 모델 경량화 프로젝트
+# 🚀 YOLOv8 경량 분실물 탐지 Lite
 
-본 프로젝트는 Ultralytics YOLOv8을 기반으로 객체 탐지 모델 학습, 이미지 테스트, 실시간 성능(FPS) 측정,  
-그리고 Torch-Pruning 기반 모델 경량화 및 시각적 성능 평가를 수행합니다.
-
----
-
-## 프로젝트 구성
-
-codes/  
-├── yolov8_basic.py         # 기본 YOLOv8 학습 스크립트  
-├── yolov8_pruning.py       # 모델 Pruning + mAP & MACs 시각화  
-├── image_test.py           # 이미지 추론 및 결과 저장  
-├── fps_test.py             # FPS 측정 스크립트 (배치 지원)  
-├── newwaring.py            # 실시간 감지 + 경고음 기능 (추가됨)  
-├── weights/                # 학습된 모델 저장 폴더  
-├── dataset/                # 학습용 이미지 및 data.yaml  
-├── configs/                # pruning_config.yaml (선택)  
-├── results/                # 성능 변화 그래프 등 출력 결과  
+YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 수행하며,  
+**Torch-Pruning**을 활용한 모델 경량화로 FPS와 경량성(mAP/MACs)을 최적화한 프로젝트입니다.
 
 ---
 
-## 실행 방법
-
-### 1. 학습  
-python yolov8_basic.py
-
-### 2. 추론  
-python image_test.py
-
-### 3. FPS 측정  
-python fps_test.py
-
-### 4. 모델 Pruning 및 Fine-tuning  
-python yolov8_pruning.py --model weights/best.pt --cfg configs/pruning_config.yaml
-
-### 5. 실시간 경고 기능 (추가 기능)  
-python newwaring.py
+## ✨ 주요 기능
+- 🔍 **YOLOv8s 기반 객체 탐지**: 휴대폰 등 소형 분실물 인식
+- ⚡ **Torch-Pruning 경량화**: MACs, 파라미터 수, 모델 크기 감소
+- 📊 **자동 성능 평가**: mAP, FPS, MACs 비교
+- 🔔 **실시간 경고 시스템**: 분실물 감지 시 경고음 발생
+- 📈 **경량화 전/후 성능 로그 기록**
 
 ---
 
-## 성능 평가 지표
+## 🛠 기술 스택
 
-| 항목           | 내용                                    |
-|----------------|-----------------------------------------|
-| 모델           | YOLOv8s (Ultralytics)                   |
-| 학습 이미지 크기 | 640x640                                 |
-| 학습 Epoch     | 160                                     |
-| Pruning 알고리즘 | Torch-Pruning (GroupNorm 기반)          |
-| 시각화 그래프   | results/pruning_perf_change.png 포함     |
-
----
-
-## 주요 기술 스택
-
-- Ultralytics YOLOv8  
-- Torch-Pruning  
-- PyTorch  
-- OpenCV  
-- NumPy  
-- Matplotlib  
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=pytorch&logoColor=white)
+![YOLO](https://img.shields.io/badge/YOLO-yellow)
+![Torch-Pruning](https://img.shields.io/badge/Torch-Pruning-lightgrey)
+![OpenCV](https://img.shields.io/badge/OpenCV-%235C3EE8.svg?logo=opencv&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
 
 ---
 
-## 참고 사항
+## 📂 프로젝트 구조
+📦 yolov8-lostitem-pruning
+┣ 📂 configs # Pruning 설정 파일(예: pruning_config.yaml)
+┣ 📂 dataset # 데이터셋 및 data.yaml
+┣ 📂 results # 성능 결과/그래프/로그
+┣ 📂 weights # 학습/경량화된 가중치(.pt)
+┣ 📜 yolov8_basic.py # 기본 학습 스크립트
+┣ 📜 yolov8_pruning.py # 모델 경량화 + mAP/MACs/FPS 평가
+┣ 📜 image_test.py # 이미지 단일/배치 추론
+┣ 📜 fps_test.py # FPS 측정 스크립트
+┣ 📜 newwarning.py # 실시간 탐지 + 경고음 알림
+┣ 📜 requirements.txt # 의존성 목록
+┗ 📜 README.md # 문서
 
-- fps_test.py는 배치 크기를 조절하여 실사용 기준 FPS를 측정합니다.  
-- yolov8_pruning.py는 iterative pruning + fine-tuning 과정을 반복하며 성능을 기록합니다.  
-- Pruning 이후 mAP 감소가 --max-map-drop 이상이면 자동 중단됩니다.  
-- pruning_perf_change.png는 pruning 단계별 mAP 및 MACs 변화를 시각화한 결과입니다.  
-- newwaring.py는 특정 객체(휴대폰, 지갑 등) 감지 시 경고음 출력 기능을 제공합니다. Windows 전용입니다.
 
----
-
-## 라이선스
-
-본 프로젝트는 MIT License 하에 배포됩니다.
-
----
-
-## 개발자 정보
-
-- GitHub: https://github.com/taehoon1223
