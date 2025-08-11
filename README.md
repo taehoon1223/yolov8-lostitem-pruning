@@ -62,6 +62,13 @@ YOLOv8 기반으로 **택시 내 분실물(휴대폰 등) 실시간 탐지**를 
 ![성능 그래프](yolov8_lostitem_pruning_graph.png)
 
 
+### 📌 모델 경량화 선택 이유
+- 분석 결과, **Target Speed-up 2x (약 50% Pruning)** 적용 시 mAP 감소폭이 **1.4%**로 매우 작으면서도 FPS가 약 **1.2배** 향상됨.
+- 그 이상의 Speed-up은 FPS 향상폭이 크지 않은 반면, mAP 손실이 급격히 증가.
+- **따라서, 본 시스템에는 Target Speed-up 2x를 적용하기로 최종 결정함.**
+
+
+
 ## 🖼 데모 영상
 ![실시간 탐지 데모](yolo_demo.gif)
 
